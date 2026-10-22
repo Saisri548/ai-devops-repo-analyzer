@@ -1,4 +1,4 @@
-"""GitHub API client for repository metadata and tree lookup."""
+"""GitHub API client used to fetch repository metadata and tree data."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ class GitHubClient:
 
     @staticmethod
     def validate_repository_url(repository_url: str) -> tuple[str, str]:
-        """Parse and validate a repository URL, returning (owner, repo)._"""
+        """Parse and validate a repository URL, returning (owner, repo)."""
         parsed = urlparse(repository_url)
 
         if parsed.scheme not in {"http", "https"}:
